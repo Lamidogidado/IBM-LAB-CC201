@@ -26,7 +26,7 @@ The series progresses sequentially from packaging a single application component
 
 ## 🛠️ Repository Roadmap
 
-### [Lab 1: Containerization with Docker](./labs/1_IntroductionToDocker/)
+### [Lab 1: Containerization with Docker](./labs/1_ContainersAndDocker/)
 * **Focus:** Packaging legacy applications for modern cloud environments.
 * **Key Achievements:** Built optimized multi-layer Docker images for a Node.js runtime, managed local image layers, and configured image pushes to a private cloud registry.
 * **Tech Stack:** Docker, IBM Cloud Container Registry.
