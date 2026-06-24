@@ -16,10 +16,11 @@ The series progresses sequentially from packaging a single application component
                                                     ├──> [ Pod Replica 2 ]
                                                     └──> [ Pod Replica 3 ]
                                                     │
-                                        (Lab 3: Rolling Updates)
+                                        (Lab 3 & 4: Auto-Scaling & Updates)
                                                     │
                                                     ▼
-                                      [ Smooth Transition to v2 ]
+                             [ Secure Secret Injection & HPA Scale Fleet ]
+            
 ```
 
 ---
@@ -41,7 +42,12 @@ The series progresses sequentially from packaging a single application component
 * **Key Achievements:** Elastic horizontal scaling to 10 active concurrent application pods. Executed an live, in-production rolling upgrade strategy from version `v1` to `v2` with transient proxy failover monitoring under high traffic load.
 * **Tech Stack:** Horizontal Pod Scaling, Rolling Updates (`kubectl set image`), Service Self-Healing.
 
+### [Lab 4: Automated Scaling & Secrets Management](./labs/4_k8-scaling-and-secrets-mgmt/)
+* **Focus:** Automated elastic scaling alongside security hardening policies.requirements and version migrations
+* **Key Achievements:** Configured automated cluster adjustments via the Horizontal Pod Autoscaler (HPA) responding to traffic demand thresholds. Isolated database authentication assets from source layouts using native Secret configuration models.
+* **Tech Stack:** Horizontal Pod Autoscaler (HPA), Kubernetes Secrets, Environment Context Injection.
+
 ---
 
 ## 🚀 Key Takeaways
-Through this progressive sequence, I engineered reliable application patterns demonstrating key cloud principles: **Immutability** via Docker, **Abstraction** via Kubernetes Services, and **Elastic Self-Healing Capability** under scale adjustments and runtime version delivery.
+Through this progressive sequence, I engineered reliable application patterns demonstrating key cloud principles: Immutability via Docker, Abstraction via Kubernetes Services, and Elastic Self-Healing Capability & Secrets Decoupling under scale adjustments and secure parameter distribution.
