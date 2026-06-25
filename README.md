@@ -47,7 +47,8 @@ The series progresses sequentially from packaging a single application component
 * **Key Achievements:** Configured automated cluster adjustments via the Horizontal Pod Autoscaler (HPA) responding to traffic demand thresholds. Isolated database authentication assets from source layouts using native Secret configuration models.
 * **Tech Stack:** Horizontal Pod Autoscaler (HPA), Kubernetes Secrets, Environment Context Injection.
 
-## 🚀 Module 5: Enterprise Red Hat OpenShift Basics
+### [Lab 5: Enterprise Red Hat OpenShift Basics](./labs/5_openshift-basics/)
+ 
 
 In this lab, I migrated a local Node.js CRUD application to an enterprise-grade Red Hat OpenShift environment utilizing Source-to-Image (S2I) build pipelines, automated routing services, and deployment lifecycle configurations.
 
