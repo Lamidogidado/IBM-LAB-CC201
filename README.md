@@ -47,6 +47,30 @@ The series progresses sequentially from packaging a single application component
 * **Key Achievements:** Configured automated cluster adjustments via the Horizontal Pod Autoscaler (HPA) responding to traffic demand thresholds. Isolated database authentication assets from source layouts using native Secret configuration models.
 * **Tech Stack:** Horizontal Pod Autoscaler (HPA), Kubernetes Secrets, Environment Context Injection.
 
+## 🚀 Module 5: Enterprise Red Hat OpenShift Basics
+
+In this lab, I migrated a local Node.js CRUD application to an enterprise-grade Red Hat OpenShift environment utilizing Source-to-Image (S2I) build pipelines, automated routing services, and deployment lifecycle configurations.
+
+### 🛠️ Key Technical Milestones Achieved:
+1. **Source-to-Image (S2I) Compilation**: Configured an automated pipeline that pulled application source code directly from Git, securely managed standard dependency configurations (`npm install`), and pushed the built container directly into the cluster's internal image registry.
+2. **Cluster Topology Deployment**: Provisioned and validated a healthy active runtime pod linked to an active routing service mapped to a secure public endpoint.
+3. **Infrastructure Declarations**: Extracted and backed up core platform configurations (`Deployment` and `ReplicaSet` specs) tracking built-in memory/CPU boundary limits and progress deadlines.
+
+### 📊 Lab Artifacts & Manifests
+* **Live App Endpoint**: [Deployed Application UI Workspace](https://nodejs-ex-git-sn-labs-lamido361.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud/)
+* **Cluster Deployment Specification**: [`deployment-nodejs-ex-git.yaml`](./labs/5_openshift-basics/deployment-nodejs-ex-git.yaml)
+* **Cluster ReplicaSet Blueprint**: [`replicaset-nodejs-ex-git-7dc754986.yaml`](./labs/5_openshift-basics/replicaset-nodejs-ex-git-7dc754986.yaml)
+
+### 📸 Architecture Visual Proof
+#### Active Deployment Ring Topology View
+![OpenShift Deployment Topology](./labs/5_openshift-basics/assets/Screenshot%20from%202026-06-25%2017-11-16.png)
+
+#### Successful S2I Build Log Proof
+![Build Pipeline Stream Success](./labs/5_openshift-basics/assets/Screenshot%20from%202026-06-25%2017-41-12.png)
+
+#### Live Web Application User Interface
+![Live Application Platform UI](./labs/5_openshift-basics/assets/Screenshot%20from%202026-06-25%2018-30-35.png)
+
 ---
 
 ## 🚀 Key Takeaways
