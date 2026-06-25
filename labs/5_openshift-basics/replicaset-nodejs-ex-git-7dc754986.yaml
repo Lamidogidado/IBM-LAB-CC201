@@ -1,0 +1,136 @@
+﻿kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '2'
+    app.openshift.io/vcs-ref: ''
+    app.openshift.io/route-disabled: 'false'
+    openshift.io/generated-by: OpenShiftWebConsole
+    alpha.image.policy.openshift.io/resolve-names: '*'
+    deployment.kubernetes.io/max-replicas: '2'
+    deployment.kubernetes.io/desired-replicas: '1'
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"nodejs-ex-git:latest","namespace":"sn-labs-lamido361"},"fieldPath":"spec.template.spec.containers[?(@.name==\"nodejs-ex-git\")].image","paused":false}]'
+    app.openshift.io/vcs-uri: 'https://github.com/sclorg/nodejs-ex.git'
+  resourceVersion: '2882089806'
+  name: nodejs-ex-git-7dc754986
+  uid: 4ca73356-a162-4923-907a-fd7c2f4bb0b4
+  creationTimestamp: '2026-06-25T16:36:54Z'
+  generation: 1
+  managedFields:
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: apps/v1
+      time: '2026-06-25T16:36:54Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:deployment.kubernetes.io/desired-replicas': {}
+            'f:image.openshift.io/triggers': {}
+            .: {}
+            'f:deployment.kubernetes.io/revision': {}
+            'f:app.openshift.io/route-disabled': {}
+            'f:app.openshift.io/vcs-uri': {}
+            'f:openshift.io/generated-by': {}
+            'f:alpha.image.policy.openshift.io/resolve-names': {}
+            'f:deployment.kubernetes.io/max-replicas': {}
+            'f:app.openshift.io/vcs-ref': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:deployment': {}
+            'f:pod-template-hash': {}
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"9d46ad94-5f78-434b-8de5-5a56eef7bfe4"}': {}
+        'f:spec':
+          'f:replicas': {}
+          'f:selector': {}
+          'f:template':
+            'f:metadata':
+              'f:labels':
+                .: {}
+                'f:app': {}
+                'f:deployment': {}
+                'f:pod-template-hash': {}
+            'f:spec':
+              'f:containers':
+                'k:{"name":"nodejs-ex-git"}':
+                  .: {}
+                  'f:image': {}
+                  'f:imagePullPolicy': {}
+                  'f:name': {}
+                  'f:ports':
+                    .: {}
+                    'k:{"containerPort":8080,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                  'f:resources': {}
+                  'f:terminationMessagePath': {}
+                  'f:terminationMessagePolicy': {}
+              'f:dnsPolicy': {}
+              'f:restartPolicy': {}
+              'f:schedulerName': {}
+              'f:securityContext': {}
+              'f:terminationGracePeriodSeconds': {}
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: apps/v1
+      time: '2026-06-25T16:37:00Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:availableReplicas': {}
+          'f:fullyLabeledReplicas': {}
+          'f:observedGeneration': {}
+          'f:readyReplicas': {}
+          'f:replicas': {}
+      subresource: status
+  namespace: sn-labs-lamido361
+  ownerReferences:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: nodejs-ex-git
+      uid: 9d46ad94-5f78-434b-8de5-5a56eef7bfe4
+      controller: true
+      blockOwnerDeletion: true
+  labels:
+    app: nodejs-ex-git
+    deployment: nodejs-ex-git
+    pod-template-hash: 7dc754986
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-ex-git
+      pod-template-hash: 7dc754986
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nodejs-ex-git
+        deployment: nodejs-ex-git
+        pod-template-hash: 7dc754986
+    spec:
+      containers:
+        - name: nodejs-ex-git
+          image: 'image-registry.openshift-image-registry.svc:5000/sn-labs-lamido361/nodejs-ex-git@sha256:78f7564d324899e0d65dd6e595cec3bfbd166cc56fc28e07b42060e0202c45ad'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+status:
+  replicas: 1
+  fullyLabeledReplicas: 1
+  readyReplicas: 1
+  availableReplicas: 1
+  observedGeneration: 1
